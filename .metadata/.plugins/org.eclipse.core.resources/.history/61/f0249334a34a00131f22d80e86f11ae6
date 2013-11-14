@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notification Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+            // Empty
+        }
+
+        // Show a custom alert
+        //
+        function showAlert() {
+            navigator.notification.alert(
+                    'You are the winner!',  // message
+                    'Game Over',            // title
+                    'Done'                  // buttonName
+            );
+        }
+
+        // Beep three times
+        //
+        function playBeep() {
+            navigator.notification.beep(3);
+        }
+
+        // Vibrate for 2 seconds
+        //
+        function vibrate() {
+            navigator.notification.vibrate(2000);
+        }
+		
+		 function takePicture() {
+
+    		navigator.camera.getPicture(
+        	function(uri) {
+            	var img = document.getElementById('camera_image1');
+            	img.style.visibility = "visible";
+            	img.style.display = "block";
+            	img.src = uri;
+            	document.getElementById('camera_status').innerHTML = "Success";
+			},{ quality: 50, allowEdit: true, destinationType: navigator.camera.DestinationType.FILE_URI});
+};
+		
+    </script>
+</head>
+<body>
+<p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+<p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
+<p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
+<p><a href="#" onclick="takePicture(); return false;">take a pic</a></p>
+<div id="camera_image1"></div>
+</body>
+</html>

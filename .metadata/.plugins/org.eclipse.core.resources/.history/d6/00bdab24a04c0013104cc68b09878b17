@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+
+    <!--<script type="text/javascript"-->
+            <!--src="http://www.hebcal.com/hebcal/?v=1&amp;cfg=e2&amp;nh=on&amp;nx=on&amp;year=now&amp;month=x&amp;ss=on&amp;mf=on">-->
+    <!--</script>-->
+    <!--<script type="text/javascript"-->
+            <!--src="http://www.hebcal.com/i/calendar-2.0-min.js">-->
+    <!--</script>-->
+    <!--<link type="text/css" rel="stylesheet"-->
+          <!--href="http://www.hebcal.com/i/jec-grey-min.css">-->
+    <!--<style type="text/css">-->
+        <!--#myCalendarContainer table { width: 800px }-->
+        <!--#myCalendarContainer table td.dayHasEvent { height: 80px }-->
+        <!--#myCalendarContainer table td.dayBlank { height: 80px }-->
+    <!--</style>-->
+</head>
+<body>
+<!--<div id="myCalendarContainer"></div>-->
+<!--<script type="text/javascript">-->
+    <!--var myCalendar = new JEC("myCalendarContainer",-->
+            <!--{tableClass: "greyCalendar", linkNewWindow: false});-->
+    <!--myCalendar.defineEvents(HEBCAL.jec2events);-->
+    <!--myCalendar.showCalendar();-->
+<!--</script>-->
+
+<div id="myBDayConvertor">
+    <input type="number" name="day"/>
+    <input type="number" name="month"/>
+    <input type="number" name="year"/>
+</div>
+
+</body>
+</html>
